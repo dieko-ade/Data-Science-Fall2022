@@ -1,0 +1,14 @@
+# Author: Enoch Adelekan
+# Date: September 14, 2022
+# Purpose: Testing ANOVA function
+
+
+# Read data
+setwd("/Users/enochadelekan/Desktop/VsCode/R")
+
+data <- read.csv(file = "COVID-Data.csv", header = TRUE)
+head(data)
+
+# Apply the ANOVA function
+anova_one_way <- aov(Confirmed ~ Deaths, data = data)
+summary(anova_one_way)
