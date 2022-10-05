@@ -1,0 +1,16 @@
+# Assign values to variable x and y
+x <- c(1000, 230, 12333, 3455, 23, 12, 3, 4, 45, 56, 78)
+y <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+
+# Generates data points in sequence from -5 to 5
+points <- seq(-5, 5, length = 100)
+
+# Create distribution plots for x and y
+plot(points, dt(points, df = 9), col = "red", type = "l")
+lines(density(x), col = "green")
+lines(density(y), col = "blue")
+
+# Carry out t-test
+ttest <- t.test(x, y)
+ttest
+
