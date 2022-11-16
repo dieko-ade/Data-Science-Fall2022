@@ -12,3 +12,4 @@ head(data)
 # Apply the ANOVA function
 anova_one_way <- aov(Confirmed ~ Deaths, data = data)
 summary(anova_one_way)
+TukeyHSD(anova_one_way)
